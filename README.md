@@ -164,8 +164,6 @@ Project Link: https://github.com/Jadesprint/Repo-EDA-examen-2
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * Al profesor Hinojosa por la simulación de un proyecto profesional. Personalmente me divertí bastante
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
