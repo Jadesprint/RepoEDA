@@ -1,0 +1,3 @@
+C:\Users\casil\source\repos\ContactosLista\ContactosLista\x64\Debug\ContactosLista.vcxproj.AssemblyReference.cache
+C:\Users\casil\source\repos\ContactosLista\ContactosLista\x64\Debug\ContactosLista.MyForm.resources
+C:\Users\casil\source\repos\ContactosLista\ContactosLista\x64\Debug\ContactosLista.vcxproj.GenerateResource.cache

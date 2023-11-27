@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+C:\Users\casil\source\repos\ContactosLista\ContactosLista\MyForm.cpp(8,1): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
+  MyForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  ContactosLista.vcxproj -> C:\Users\casil\source\repos\ContactosLista\x64\Debug\ContactosLista.exe
