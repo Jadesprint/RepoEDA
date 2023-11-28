@@ -1,5 +1,48 @@
 #pragma once
 #include <msclr/marshal_cppstd.h>
+#include <string>
+#include <vector>
+#include <msclr\auto_gcroot.h>
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace msclr::interop;
+public ref class HashTable
+{
+public:
+	HashTable()
+	{
+		// Initialize the table with nullptr values
+		table = gcnew array<ListBox^>(10);
+		for (int i = 0; i < 10; i++)
+		{
+			table[i] = nullptr;
+		}
+	}
+
+	void Insert(String^ val, ListBox^ listBox)
+	{
+		listBox->Items->Add(val);
+	}
+
+	void GetAll(ListBox^% listBox)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			if (table[i] != nullptr)
+			{
+				// Iterate through all items in the list and add them to the provided listBox
+				for each (String ^ item in table[i]->Items)
+				{
+					listBox->Items->Add(item);
+				}
+			}
+		}
+	}
+
+private:
+	array<ListBox^>^ table;
+};
+
 
 void quickSort(std::string* arr, int start, int end) {
 	int size = end - start + 1;
@@ -22,6 +65,7 @@ void quickSort(std::string* arr, int start, int end) {
 		quickSort(arr, index + 1, end);
 	}
 }
+
 namespace ContactosLista {
 
 	using namespace System;
@@ -169,8 +213,7 @@ namespace ContactosLista {
 			// 
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 16;
-			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
-				L"Persona7", L"Persona4", L"Persona3", L"Persona2",
+			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) {
 					L"Persona0"
 			});
 			this->listBox1->Location = System::Drawing::Point(3, 23);
@@ -228,14 +271,19 @@ namespace ContactosLista {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-
-	}
+		HashTable hashTable;
+		hashTable.Insert("Juana", listBox1);
+		hashTable.Insert("Pedro", listBox1);
+		hashTable.Insert("Alex", listBox1);
+		hashTable.Insert("Iguana", listBox1);
+		hashTable.Insert("Anana", listBox1);
+}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Agg contacto
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Ord por tlfno
-	// Fill the namevs array with items from listBox1
+	// Fill the names array with items from listBox1
 	array<String^>^ names = gcnew array<String^>(listBox2->Items->Count);
 	for (int i = 0; i < listBox2->Items->Count; i++)
 	{
@@ -289,7 +337,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	}
 
 }
-		   private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		   /*private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 			   // Obtén el índice y el elemento seleccionado en listBox1
 			   int selectedIndex = listBox1->SelectedIndex;
 			   String^ selectedItem = dynamic_cast<String^>(listBox1->SelectedItem);
@@ -302,6 +350,6 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 				   listBox3->Items->Insert(selectedIndex, listBox3->Items[selectedIndex]);
 				   listBox3->Items->RemoveAt(selectedIndex + 1);
 			   }
-		   }
+		   }*/
 };
 }
