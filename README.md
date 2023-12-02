@@ -78,7 +78,19 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Se intentó crear una aplicación de contactos usando el código de una Hash Table chained y una GUI hecha en Visual Studio la cual no nos fue posible completar
+Este prototipo se enfoca en la creación de una aplicación
+simple de contactos. La implementación se basa en el uso de
+una Hash Table encadenada en C++, que proporciona una estructura 
+eficiente para almacenar, buscar, eliminar y
+recuperar información de contactos. Además, se incorporan
+algoritmos de ordenamiento recursivo, específicamente
+QuickSort, para organizar los contactos de manera eficiente.
+
+Un aspecto destacado del prototipo es la adopción de una
+interfaz gráfica de usuario (GUI) desarrollada en Visual Studio.
+Esta elección refleja la integración de tecnologías modernas
+para mejorar la experiencia del usuario al interactuar con la
+lista de contactos.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
