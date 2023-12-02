@@ -30,7 +30,7 @@
   <h3 align="center">Repo EDA</h3>
 
   <p align="center">
-    Repo del segundo parcial
+    Aplicacion de Contactos
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
